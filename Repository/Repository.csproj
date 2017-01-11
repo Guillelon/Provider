@@ -53,17 +53,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DbContext.cs" />
+    <Compile Include="ProviderDBContext.cs" />
+    <Compile Include="Migrations\201701111540475_inniitMigration.cs" />
+    <Compile Include="Migrations\201701111540475_inniitMigration.Designer.cs">
+      <DependentUpon>201701111540475_inniitMigration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\Sale.cs" />
     <Compile Include="Models\TypeProduct.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Models\SaleDetail.cs" />
+    <Compile Include="Repos\MasterRepository.cs" />
+    <Compile Include="Repos\ProductRepository.cs" />
+    <Compile Include="Repos\UnitOfWork.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201701111540475_inniitMigration.resx">
+      <DependentUpon>201701111540475_inniitMigration.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
